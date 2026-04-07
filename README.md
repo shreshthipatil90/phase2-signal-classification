@@ -15,11 +15,12 @@ This project is part of the Automation Opportunity Detection System.
 ## Author
 Shreshthi Patil
 
-## Updates (Week 2)
+## Week 2 Updates 
 
-- Integrated classify_company with extract_signals() output
-- Added role counting logic (5+ roles → HIGH)
-- Implemented basic role clustering
-- Added test cases for validation
+- Day 8: Integrated classification with extract_signals() output
+- Day 9: Added role counting logic (5+ roles → HIGH_MANUAL)
+- Day 10: Implemented role clustering for similar job titles
+- Day 12: Tested classification on sample companies
+- Day 14: Delivered final classification function with full integration
 
 Author: Shreshthi Patil
