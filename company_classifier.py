@@ -1,3 +1,39 @@
+from extract_signals import extract_signals
+
+
+def classify_from_job_description(job_description):
+    """
+    Day 8 Integration
+
+    Takes raw job description → extracts signals → converts to structured signals → classifies
+    """
+
+    # Step 1: Extract phrases using Anuradha's function
+    extracted_phrases = extract_signals(job_description)
+
+    # Step 2: Convert phrases → signal counts
+    manual_roles = 0
+    manual_keywords = len(extracted_phrases)
+
+    # Count roles (basic logic)
+    for phrase in extracted_phrases:
+        if any(word in phrase for word in ["data entry", "back office", "operations", "admin"]):
+            manual_roles += 1
+
+    # Step 3: Create signals dict (expected by classify_company)
+    signals = {
+        "manual_roles": manual_roles,
+        "manual_keywords": manual_keywords,
+        "scaling": "expanding" in job_description.lower() or "scaling" in job_description.lower()
+    }
+
+    # Step 4: Call main classifier
+    return classify_company(signals)
+
+
+
+
+
 """
 File: company_classifier.py
 
