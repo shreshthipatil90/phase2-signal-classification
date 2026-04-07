@@ -6,18 +6,14 @@ This file tests the classification logic on sample companies.
 (Simulating database testing – Day 12)
 """
 
-from company_classifier import classify_company
+from company_classifier import classify_from_job_description
 
-# Sample test data (simulating company signals)
-test_companies = [
-    {"manual_roles": 6, "manual_keywords": 4, "scaling": True},
-    {"manual_roles": 2, "manual_keywords": 1, "scaling": False},
-    {"manual_roles": 4, "manual_keywords": 2, "scaling": False},
-    {"manual_roles": 1, "manual_keywords": 0, "scaling": False},
-    {"manual_roles": 5, "manual_keywords": 3, "scaling": True},
+job_samples = [
+    "We are hiring data entry operators for manual Excel reporting and tracking.",
+    "Looking for software engineer with Python and React experience.",
+    "Back office executive required for manual coordination and reporting.",
 ]
 
-# Run tests
-for i, signals in enumerate(test_companies):
-    result = classify_company(signals)
-    print(f"Company {i+1}: {result}")
+for i, job in enumerate(job_samples):
+    result = classify_from_job_description(job)
+    print(f"Job {i+1}: {result}")
