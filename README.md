@@ -24,3 +24,12 @@ Shreshthi Patil
 - Day 14: Delivered final classification function with full integration
 
 Author: Shreshthi Patil
+
+ Pitch Generator
+- Generates personalized outreach emails
+- Inputs:
+  - Company name
+  - Detected signals
+  - Lead score
+- Outputs:
+  - Ready-to-send automation pitch
